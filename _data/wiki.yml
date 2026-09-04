@@ -1,0 +1,40 @@
+title: N4-K2 Knowledge Base
+description: Characters, species, lore, documentation, roadmaps, galleries, and changelogs.
+namespaces:
+- label: Characters
+  url: /wiki/characters/
+  collection: characters
+  description: Character records, relationships, roles, and continuity notes.
+- label: Species
+  url: /wiki/species/
+  collection: species
+  description: Species appearance, biology, traits, and worldbuilding rules.
+- label: Lore
+  url: /wiki/lore/
+  collection: lore
+  description: World rules, locations, systems, timelines, and continuity records.
+- label: TAHAUFYA Character Bible
+  url: /character-bible/
+  collection: tahaufya_bible
+  description: The complete current-cast-only writer reference with 25 active dossiers
+    and the original 212-page PDF.
+- label: Documentation
+  url: /docs/
+  collection: docs
+  description: Technical and project documentation.
+- label: Roadmaps
+  url: /roadmaps/
+  collection: roadmaps
+  description: Plans, milestones, and project status.
+- label: Gallery
+  url: /gallery/
+  collection: galleries
+  description: Visual-reference galleries and image placeholders.
+- label: Changelog
+  url: /changelog/
+  collection: changelogs
+  description: Site and project change records.
+- label: Tags
+  url: /tags/
+  collection: meta
+  description: Browse records by shared tags.

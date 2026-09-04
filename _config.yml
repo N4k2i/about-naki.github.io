@@ -1,0 +1,132 @@
+title: Naki // N4-K2
+description: Developer • Gamer • Storyteller • Worldbuilder
+author: Naki
+url: https://n4k2i.github.io
+baseurl: /about-naki.github.io
+lang: en
+timezone: America/Chicago
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  writing:
+    output: true
+    permalink: /writing/:name/
+  characters:
+    output: true
+    permalink: /wiki/characters/:name/
+  species:
+    output: true
+    permalink: /wiki/species/:name/
+  lore:
+    output: true
+    permalink: /wiki/lore/:name/
+  docs:
+    output: true
+    permalink: /docs/:name/
+  roadmaps:
+    output: true
+    permalink: /roadmaps/:name/
+  galleries:
+    output: true
+    permalink: /gallery/:name/
+  changelogs:
+    output: true
+    permalink: /changelog/:name/
+  tahaufya_bible:
+    output: true
+    permalink: /character-bible/:name/
+  arg:
+    output: true
+    permalink: /signal/:name/
+  arg_mature:
+    output: true
+    permalink: /signal-mature/:name/
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: default
+- scope:
+    path: ''
+    type: projects
+  values:
+    layout: project
+- scope:
+    path: ''
+    type: writing
+  values:
+    layout: writing
+- scope:
+    path: ''
+    type: characters
+  values:
+    layout: wiki-record
+    record_type: Character
+- scope:
+    path: ''
+    type: species
+  values:
+    layout: wiki-record
+    record_type: Species
+- scope:
+    path: ''
+    type: lore
+  values:
+    layout: wiki-record
+    record_type: Lore
+- scope:
+    path: ''
+    type: docs
+  values:
+    layout: doc
+    record_type: Documentation
+- scope:
+    path: ''
+    type: roadmaps
+  values:
+    layout: roadmap
+    record_type: Roadmap
+- scope:
+    path: ''
+    type: galleries
+  values:
+    layout: gallery
+    record_type: Gallery
+- scope:
+    path: ''
+    type: changelogs
+  values:
+    layout: changelog
+    record_type: Changelog
+- scope:
+    path: ''
+    type: tahaufya_bible
+  values:
+    layout: character-bible-dossier
+- scope:
+    path: ''
+    type: arg
+  values:
+    layout: arg-record
+    record_type: Signal
+- scope:
+    path: ''
+    type: arg_mature
+  values:
+    layout: arg-record
+    record_type: 18+ RECOVERED RECORD
+    mature_mode: true
+exclude:
+- README.md
+- PRIVACY.md
+- Gemfile
+- Gemfile.lock
+- vendor
+- node_modules
+- scripts
+- ARG_OWNER_GUIDE.md
+- ARG_STORY_MAP.md

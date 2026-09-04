@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<section class="page-hero section bible-dossier-hero">
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}">Home</a><span>/</span>
+      <a href="{{ '/character-bible/' | relative_url }}">Character Bible</a><span>/</span>
+      <span aria-current="page">{{ page.title }}</span>
+    </nav>
+
+    <p class="eyebrow">TAHAUFYA // DOSSIER {{ page.dossier_number }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="page-hero-description">{{ page.category }}</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="shell wiki-record-grid">
+    <div class="wiki-main">
+      <article class="glass-card bible-web-dossier">
+        {{ content }}
+      </article>
+    </div>
+
+    <div class="wiki-sidebar-stack">
+      <aside class="wiki-meta glass-card">
+        <div class="card-label">CURRENT CANON DOSSIER</div>
+        <dl class="data-list">
+          <div><dt>Roster</dt><dd>{{ page.roster_group }}</dd></div>
+          <div><dt>Pronouns</dt><dd>{{ page.pronouns }}</dd></div>
+          <div><dt>Species / Type</dt><dd>{{ page.species_type }}</dd></div>
+          <div><dt>Age</dt><dd>{{ page.age }}</dd></div>
+          <div><dt>Story Role</dt><dd>{{ page.story_role }}</dd></div>
+          <div><dt>Canon Scope</dt><dd>{{ page.canon_scope }}</dd></div>
+        </dl>
+      </aside>
+
+      <aside class="glass-card wiki-tools">
+        <div class="card-label">BIBLE TOOLS</div>
+        <a href="{{ '/character-bible/' | relative_url }}">Character Bible Home</a>
+        <a href="{{ page.source_pdf | relative_url }}" target="_blank" rel="noopener">Open Original PDF</a>
+        <button type="button" data-copy-record-link>COPY DOSSIER LINK</button>
+      </aside>
+    </div>
+  </div>
+</section>

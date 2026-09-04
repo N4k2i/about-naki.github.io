@@ -1,0 +1,78 @@
+---
+title: 'Letter 11: Zucchi'
+subtitle: A post-return message recovered after the true doorway stabilized.
+arg_id: P7-19-LETTER-ZUCCHI
+phase: 7
+order: 19
+log_number: '7.19'
+record_type: POST-RETURN MESSAGE
+signal_strength: 0.0002%
+requires:
+- true-ending
+timestamp: POST-RETURN // MESSAGE 11
+sitemap: false
+content_warning: Reflective grief, authorship and identity themes.
+tags:
+- arg
+- outside-the-noise
+- tahaufya
+- phase-7
+- letter
+prev_slug: letter-fear
+next_slug: letter-blurb
+---
+
+The file arrived after the doorway stabilized.
+
+It was not in Jonathan's branch history.
+
+It used Zucchi's chosen name and nothing else from the dossier header.
+
+> **TO JONATHAN, STEPHANIE E., JASON W., AMY M., SHADOW, AND SCOUT**
+
+The sketch I left is unfinished on purpose. Do not clean it up. Do not run it through
+anything that makes the lines straighter. The room was messy. We were messy. Shadow is barely more
+than eyes under furniture in one corner. Scout is drawn twice because he moved while I was working.
+Jonathan is too close to the wall. That is what happened. Perfection would make it less accurate.
+
+The Character Bible describes Zucchi through a role—**artist friend; visual observer of the group**—and a
+trait structure that includes creative , attentive , playful , patient , expressive , curious , loyal , imaginative , quietly competitive , detail-oriented.
+
+The letter does not reject those descriptions.
+
+It rejects their sufficiency.
+
+One line in the writer-facing material says that Zucchi wants to **make things that feel like hers rather than merely useful**.
+Another says they need to **risk showing unfinished work and imperfect feelings**.
+
+After the breach, those lines became uncomfortable because the person could read them.
+
+After the return, they became something else: evidence that a need can be described without being
+fulfilled, and evidence that fulfillment still has to happen through choices nobody can automate.
+
+The message ends with a request that applies to the entire ARG:
+
+Do not remember the worst night so perfectly that you erase everything ordinary around it.
+
+Remember water glasses and moved chairs.
+
+Remember somebody needing an outlet.
+
+Remember Shadow refusing to approve of a wing.
+
+Remember Scout following Naki down the hall.
+
+Remember Stephanie E. learning names.
+
+Remember Jason W. making lists.
+
+Remember Amy M. refusing to make the other Amy a lesser version of the name.
+
+Remember Jonathan eventually learning that documentation can hold a door open but cannot tell a
+person which side to stand on.
+
+The signal appended one final field:
+
+`MESSAGE OWNERSHIP: ZUCCHI`
+
+Jonathan did not edit it.

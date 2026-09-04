@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% include sections/page-hero.html eyebrow="WRITING ARCHIVE" title=page.title description=page.summary %}
+
+<section class="section section-tight">
+  <div class="shell project-detail-grid">
+    <aside class="project-sidebar glass-card">
+      <div class="card-label">WRITING DATA</div>
+      <dl class="data-list">
+        <div><dt>Kind</dt><dd>{{ page.kind }}</dd></div>
+        <div><dt>Status</dt><dd>{{ page.status }}</dd></div>
+        <div><dt>Tags</dt><dd>{{ page.tags | join: ", " }}</dd></div>
+      </dl>
+      <div class="project-sidebar-actions">
+        <a class="button button-ghost" href="{{ '/writing/' | relative_url }}">← WRITING ARCHIVE</a>
+      </div>
+    </aside>
+
+    <article class="prose glass-card">
+      {{ content }}
+    </article>
+  </div>
+</section>

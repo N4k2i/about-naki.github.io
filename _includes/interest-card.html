@@ -1,0 +1,10 @@
+<article class="feature-card reveal">
+  <div class="feature-number">{{ interest[1].number }}</div>
+  <h3>{{ interest[1].title }}</h3>
+  <p>{{ interest[1].description }}</p>
+  <div class="tag-cloud">
+    {% for tag in interest[1].tags %}
+      <span>{{ tag }}</span>
+    {% endfor %}
+  </div>
+</article>

@@ -1,0 +1,25 @@
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <span>/</span>
+  {% case page.collection %}
+    {% when "characters" %}
+      <a href="{{ '/wiki/' | relative_url }}">Wiki</a><span>/</span>
+      <a href="{{ '/wiki/characters/' | relative_url }}">Characters</a>
+    {% when "species" %}
+      <a href="{{ '/wiki/' | relative_url }}">Wiki</a><span>/</span>
+      <a href="{{ '/wiki/species/' | relative_url }}">Species</a>
+    {% when "lore" %}
+      <a href="{{ '/wiki/' | relative_url }}">Wiki</a><span>/</span>
+      <a href="{{ '/wiki/lore/' | relative_url }}">Lore</a>
+    {% when "docs" %}
+      <a href="{{ '/docs/' | relative_url }}">Docs</a>
+    {% when "roadmaps" %}
+      <a href="{{ '/roadmaps/' | relative_url }}">Roadmaps</a>
+    {% when "galleries" %}
+      <a href="{{ '/gallery/' | relative_url }}">Gallery</a>
+    {% when "changelogs" %}
+      <a href="{{ '/changelog/' | relative_url }}">Changelog</a>
+  {% endcase %}
+  <span>/</span>
+  <span aria-current="page">{{ page.title }}</span>
+</nav>

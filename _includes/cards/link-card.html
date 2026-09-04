@@ -1,0 +1,9 @@
+<a class="link-card reveal" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+  <span class="link-index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+  <div>
+    <small>{{ link.label | upcase }} // {{ link.category | upcase }}</small>
+    <strong>{{ link.handle }}</strong>
+    <p>{{ link.description }}</p>
+  </div>
+  <span class="link-arrow">↗</span>
+</a>

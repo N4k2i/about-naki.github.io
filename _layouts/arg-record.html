@@ -1,0 +1,128 @@
+---
+layout: default
+---
+
+<article class="arg-page"
+         data-arg-id="{{ page.arg_id }}"
+         data-arg-phase="{{ page.phase }}"
+         data-arg-required="{{ page.requires | join: ',' }}">
+  <header class="arg-header">
+    <div class="shell">
+      <nav class="arg-breadcrumbs" aria-label="ARG breadcrumb">
+        {% if page.mature_mode %}
+          <a href="{{ '/signal-mature/' | relative_url }}">SIGNAL 18+</a>
+        {% else %}
+          <a href="{{ '/signal/' | relative_url }}">SIGNAL</a>
+        {% endif %}
+        <span>/</span>
+        <span>PHASE {{ page.phase }}</span>
+        <span>/</span>
+        <span>{{ page.log_number }}</span>
+      </nav>
+
+      <p class="arg-kicker">
+        {{ page.record_type | default: "RECOVERED RECORD" }}
+        // SIGNAL {{ page.signal_strength | default: "UNSTABLE" }}
+      </p>
+
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="arg-subtitle">{{ page.subtitle }}</p>{% endif %}
+
+      <div class="arg-mode-switch">
+        {% if page.mature_mode %}
+          <span class="arg-mature-badge">18+ MODE</span>
+          <a href="{{ '/signal/' | append: page.standard_slug | append: '/' | relative_url }}">STANDARD VERSION</a>
+        {% else %}
+          <a data-arg-mature-record-link
+             data-standard-slug="{{ page.slug | default: page.name }}"
+             href="{{ '/signal/settings/' | relative_url }}">18+ VERSION</a>
+        {% endif %}
+      </div>
+      <div class="arg-header-meta">
+        <span>ARG ID: {{ page.arg_id }}</span>
+        <span>PHASE: {{ page.phase }}</span>
+        <span>LOG: {{ page.log_number }}</span>
+        {% if page.timestamp %}<span>STAMP: {{ page.timestamp }}</span>{% endif %}
+      </div>
+    </div>
+  </header>
+
+  <section class="arg-lock-screen" data-arg-lock hidden>
+    <div class="shell narrow">
+      <div class="arg-terminal-card">
+        <p class="arg-terminal-label">RECORD ENCRYPTED</p>
+        <h2>This signal is incomplete.</h2>
+        <p>The page exists, but your local archive has not recovered enough context.</p>
+        {% if page.mature_mode %}
+          <a href="{{ '/signal-mature/' | relative_url }}" class="button button-ghost">RETURN TO 18+ INDEX</a>
+        {% else %}
+          <a href="{{ '/signal/' | relative_url }}" class="button button-ghost">RETURN TO SIGNAL INDEX</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <div class="arg-record-content" data-arg-content>
+    <section class="section section-tight">
+      <div class="shell arg-story-shell">
+        {% if page.content_warning %}
+        <aside class="arg-content-warning">
+          <strong>CONTENT NOTE</strong>
+          <p>{{ page.content_warning }}</p>
+        </aside>
+        {% endif %}
+
+        <article class="arg-prose prose glass-card">{{ content }}</article>
+
+        {% if page.clue %}
+        <aside class="arg-clue-card">
+          <p class="arg-terminal-label">RECOVERED CLUE</p>
+          <p>{{ page.clue }}</p>
+        </aside>
+        {% endif %}
+
+        {% if page.code_prompt %}
+        <aside class="arg-code-panel">
+          <p class="arg-terminal-label">MANUAL DECRYPTION</p>
+          <p>{{ page.code_prompt }}</p>
+          <div class="arg-code-form">
+            <input type="text" data-arg-code-input autocomplete="off" spellcheck="false"
+                   placeholder="ENTER RECOVERY STRING">
+            <button type="button" data-arg-code-submit>SUBMIT</button>
+          </div>
+          <p class="arg-code-feedback" data-arg-code-feedback aria-live="polite"></p>
+        </aside>
+        {% endif %}
+
+
+        {% if page.puzzle_answer %}
+        <aside class="arg-code-panel arg-page-puzzle" data-arg-page-answer="{{ page.puzzle_answer | escape }}" data-arg-page-alt="{{ page.puzzle_alt_answers | join: '||' | escape }}" data-arg-page-unlock="{{ page.puzzle_unlock | default: page.arg_id | escape }}">
+          <p class="arg-terminal-label">PUZZLE // {{ page.difficulty | default: "UNKNOWN" | upcase }}{% if page.puzzle_type %} // {{ page.puzzle_type | upcase }}{% endif %}</p>
+          <p>{{ page.code_prompt | default: "Enter the recovered answer." }}</p>
+          <div class="arg-code-form"><input type="text" data-arg-page-input autocomplete="off" spellcheck="false" placeholder="ENTER ANSWER"><button type="button" data-arg-page-submit>VERIFY</button></div>
+          <p class="arg-code-feedback" data-arg-page-feedback aria-live="polite"></p>
+        </aside>
+        {% endif %}
+
+        <nav class="arg-record-nav">
+          {% if page.prev_slug %}
+            {% if page.mature_mode %}
+              <a href="{{ '/signal-mature/' | append: page.prev_slug | append: '/' | relative_url }}">← PREVIOUS RECORD</a>
+            {% else %}
+              <a href="{{ '/signal/' | append: page.prev_slug | append: '/' | relative_url }}">← PREVIOUS RECORD</a>
+            {% endif %}
+          {% else %}<span></span>{% endif %}
+          {% if page.next_slug %}
+            {% if page.mature_mode %}
+              <a href="{{ '/signal-mature/' | append: page.next_slug | append: '/' | relative_url }}">NEXT RECORD →</a>
+            {% else %}
+              <a href="{{ '/signal/' | append: page.next_slug | append: '/' | relative_url }}">NEXT RECORD →</a>
+            {% endif %}
+          {% endif %}
+        </nav>
+      </div>
+    </section>
+  </div>
+</article>
+
+<!-- OUTSIDE_THE_NOISE_RECORD={{ page.arg_id }} -->

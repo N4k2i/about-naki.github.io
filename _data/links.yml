@@ -1,0 +1,17 @@
+- label: "GitHub"
+  handle: "just-Naki-here"
+  url: "https://github.com/just-Naki-here"
+  category: "Development"
+  description: "Repositories, source code, and development projects."
+
+- label: "Roblox"
+  handle: "N4k2i"
+  url: "https://www.roblox.com/users/profile?username=N4k2i"
+  category: "Gaming"
+  description: "Main Roblox profile."
+
+- label: "AO3"
+  handle: "N4k2"
+  url: "https://archiveofourown.org/users/N4k2"
+  category: "Writing"
+  description: "Writing profile and story-related work."

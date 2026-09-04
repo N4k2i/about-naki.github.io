@@ -1,0 +1,30 @@
+{% assign all_records = site.characters
+  | concat: site.species
+  | concat: site.lore
+  | concat: site.docs
+  | concat: site.roadmaps
+  | concat: site.galleries
+  | concat: site.changelogs
+  | concat: site.projects
+  | concat: site.writing %}
+
+{% if page.related_ids and page.related_ids.size > 0 %}
+<section class="wiki-related">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">CONNECTED RECORDS</p>
+    <h2>Related</h2>
+  </div>
+
+  <div class="related-grid">
+    {% for record in all_records %}
+      {% if page.related_ids contains record.record_id %}
+        <a class="related-card" href="{{ record.url | relative_url }}">
+          <small>{{ record.record_type | default: record.collection | upcase }}</small>
+          <strong>{{ record.title }}</strong>
+          {% if record.status %}<span>{{ record.status }}</span>{% endif %}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

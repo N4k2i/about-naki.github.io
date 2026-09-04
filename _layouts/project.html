@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+{% include sections/page-hero.html eyebrow="PROJECT RECORD" title=page.title description=page.summary %}
+
+<section class="section section-tight">
+  <div class="shell project-detail-grid">
+    <aside class="project-sidebar glass-card">
+      <div class="card-label">PROJECT DATA</div>
+      <dl class="data-list">
+        <div><dt>Type</dt><dd>{{ page.type }}</dd></div>
+        <div><dt>Status</dt><dd>{{ page.status }}</dd></div>
+        <div><dt>Tags</dt><dd>{{ page.tags | join: ", " }}</dd></div>
+      </dl>
+
+      <div class="project-sidebar-actions">
+        <a class="button button-ghost" href="{{ '/projects/' | relative_url }}">← ALL PROJECTS</a>
+      </div>
+    </aside>
+
+    <div>
+      <article class="prose glass-card">
+        {{ content }}
+      </article>
+
+      {% include wiki/related-records.html %}
+      {% include wiki/backlinks.html %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">MORE RECORDS</p>
+      <h2>Other Projects</h2>
+    </div>
+
+    <div class="project-grid">
+      {% assign other_projects = site.projects | where_exp: "item", "item.url != page.url" %}
+      {% for project in other_projects limit: 3 %}
+        {% include cards/project-card.html project=project %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

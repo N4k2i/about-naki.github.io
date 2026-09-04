@@ -1,0 +1,44 @@
+gaming:
+  title: "Gaming"
+  number: "01"
+  description: "Minecraft Java Edition, Roblox, Linglox, Deltarune, progression systems, puzzle games, strange mechanics, customization, and games that reward exploration."
+  tags:
+    - "MINECRAFT"
+    - "ROBLOX"
+    - "LINGLOX"
+    - "PUZZLES"
+    - "PROGRESSION"
+
+development:
+  title: "Development"
+  number: "02"
+  description: "I like programming most when it becomes something interactive: a game mechanic, mod, automation tool, progression system, puzzle framework, or a weird experiment that actually works."
+  tags:
+    - "JAVA"
+    - "LUAU"
+    - "PYTHON"
+    - "JAVASCRIPT"
+    - "C#"
+    - "C++"
+    - "C"
+
+writing:
+  title: "Writing"
+  number: "03"
+  description: "Character-heavy fiction, progression fantasy, dark fantasy, species design, relationships, antagonists, abilities, histories, and enough worldbuilding to make a wiki inevitable."
+  tags:
+    - "FICTION"
+    - "LORE"
+    - "CHARACTERS"
+    - "WORLDBUILDING"
+
+aesthetics:
+  title: "Aesthetics"
+  number: "04"
+  description: "Cosmic, void, glitch, eldritch, dark fantasy, neon, crimson, purple, black, blue, digital interfaces, databanks, terminals, and things that look slightly dangerous."
+  tags:
+    - "COSMIC"
+    - "VOID"
+    - "GLITCH"
+    - "ELDRITCH"
+    - "NEON"

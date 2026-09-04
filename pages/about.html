@@ -1,0 +1,193 @@
+---
+layout: default
+title: "About"
+description: "A detailed profile of Naki / N4-K2 - developer, gamer, modder, mapper, storyteller, and worldbuilder."
+permalink: /about/
+---
+
+{% include sections/page-hero.html eyebrow="PROFILE // ACTUAL HUMAN BEHIND THE DATABASE" title="About Me" description=page.description %}
+
+<section class="section section-tight">
+  <div class="shell profile-layout">
+    <article class="glass-card prose">
+      <h2>Hey, I'm Naki.</h2>
+      <p>Online I usually go by <strong>Naki</strong>, <strong>N4-K2</strong>, or <strong>Nawkies</strong> depending on what I'm doing. I'm a developer, gamer, modder, mapper, storyteller, worldbuilder, and the kind of person who can start with one small mechanic and somehow end up planning an entire progression system around it.</p>
+      <p>A lot of my projects live where <strong>code, game design, puzzles, and worldbuilding overlap</strong>. I don't really enjoy making something that only has one layer if the idea clearly has room for more. If I'm building a map, I start thinking about secrets, traversal, collectibles, alternate routes, puzzles, progression, UI, achievements, lore, and tools for making the map easier to maintain. If I'm writing a character, I start thinking about their species, voice, relationships, visual rules, failure modes, timeline, and how they behave when the situation changes.</p>
+
+      <h2>The stuff I'm most into</h2>
+      <p><strong>Roblox and Linglox</strong> are a huge part of what I make. I like designing enormous Linglox-style maps, prompt systems, themed zones, puzzle mechanics, traps, parkour, hidden areas, collectibles, and tools for moving map data between different workflows.</p>
+      <p><strong>Minecraft Java Edition</strong> is another major focus. I like modding, custom progression, advancement systems, educational gameplay, puzzle content, and turning ideas from other games into Minecraft mechanics without losing what made the original system interesting.</p>
+      <p>I also spend a lot of time on <strong>writing and worldbuilding</strong>. My two biggest writing projects represented on this site are <em>TAHAUFYA: Found in the Noise</em> and <em>Casualties: Unknown - Broken Lives</em>. I like character-heavy stories with nonhuman species, complicated relationships, large casts, progression, continuity rules, and enough background information that the project eventually needs a proper wiki or character bible.</p>
+      <p>Rhythm games and modding are part of the mix too. I like things around <strong>Just Dance, Friday Night Funkin', osu!mania, music/chart timing, and game/mod experimentation</strong>. I also enjoy poking at how games and mods work internally when I want to understand or recreate a system.</p>
+
+      <h2>How my projects usually grow</h2>
+      <p>I am extremely bad at letting a project stay tiny.</p>
+      <p>A normal progression is something like: <strong>idea → mechanic → more mechanics → progression → achievements → secrets → lore → tooling → “what else is missing?”</strong>. That is how I end up with projects involving hundreds or thousands of prompts, huge advancement trees, large zone counts, detailed character databases, or way more configuration than the first version technically needed.</p>
+      <p>I prefer <strong>detail, customization, and systems that connect to each other</strong>. I would rather have a mechanic interact with the rest of the project than exist as a disconnected gimmick.</p>
+
+      <h2>Coding / development</h2>
+      <p>Languages I use or experiment with include <strong>Lua / Luau, Python, Java, JavaScript, C#, C++, and C</strong>. For web work, this site also uses <strong>HTML, CSS, Jekyll, and Liquid</strong>.</p>
+      <p>The exact language usually matters less to me than what I'm trying to build. I like programming when I can see the result doing something: spawning a game system, generating content, importing data, running a progression mechanic, organizing a wiki, or making a tool that removes repetitive work.</p>
+
+      <h2>Games and creative interests</h2>
+      <p>Some of the biggest recurring ones are <strong>Minecraft Java Edition, Roblox, Linglox, Deltarune, Just Dance, rhythm games, puzzle games, game modding, progression systems, customization, and hidden mechanics</strong>.</p>
+      <p>Visually, I keep coming back to <strong>cosmic, void, glitch, eldritch, dark-fantasy, digital, and neon aesthetics</strong>, especially combinations of <strong>black, deep purple, blue, crimson, and neon pink</strong>. That's why this site looks more like a fictional database than a normal white portfolio page.</p>
+
+      <h2>Writing</h2>
+      <p>I like stories where characters have enough detail to remain recognizable outside of the immediate plot. That means I care about <strong>voice, personality contradictions, relationships, species design, body language, continuity, emotional reactions, and how previous scenes actually change later behavior</strong>.</p>
+      <p>The TAHAUFYA section of this site includes the full current-cast character bible rather than only short wiki summaries.</p>
+
+      <h2>Why this website is so big</h2>
+      <p>A tiny link page would be easier, but it would not really represent how I make things. This site is intentionally part <strong>About Me</strong>, part <strong>portfolio</strong>, part <strong>project archive</strong>, part <strong>documentation site</strong>, and part <strong>fiction wiki</strong>.</p>
+      <p>In other words: if one page can reasonably become a database, there is a pretty good chance I will turn it into a database.</p>
+    </article>
+
+    <aside class="profile-stack">
+      <article class="glass-card">
+        <div class="card-label">QUICK DATA</div>
+        <dl class="data-list">
+          <div><dt>Name</dt><dd>{{ site.data.profile.display_name }}</dd></div>
+          <div><dt>Age</dt><dd>{{ site.data.profile.age }}</dd></div>
+          <div><dt>Aliases</dt><dd>{{ site.data.profile.aliases | join: " / " }}</dd></div>
+          <div><dt>Pronouns</dt><dd>{{ site.data.profile.pronouns }}</dd></div>
+          <div><dt>Region</dt><dd>{{ site.data.profile.region }}</dd></div>
+          <div><dt>Timezone</dt><dd>{{ site.data.profile.timezone }}</dd></div>
+          <div><dt>Author Name</dt><dd>{{ site.data.profile.author_name }}</dd></div>
+        </dl>
+      </article>
+
+      <article class="glass-card">
+        <div class="card-label">MAIN CREATIVE LANES</div>
+        <div class="tag-cloud profile-big-tags">
+          <span>ROBLOX</span><span>LINGLOX</span><span>MINECRAFT JAVA</span>
+          <span>MODDING</span><span>MAPPING</span><span>PUZZLES</span>
+          <span>PROGRESSION</span><span>WORLDBUILDING</span><span>WRITING</span>
+          <span>RHYTHM GAMES</span><span>TOOLS</span><span>WEB</span>
+        </div>
+      </article>
+
+      <article class="glass-card">
+        <div class="card-label">LANGUAGES / WEB</div>
+        <div class="tag-cloud profile-big-tags">
+          <span>LUA / LUAU</span><span>PYTHON</span><span>JAVA</span>
+          <span>JAVASCRIPT</span><span>C#</span><span>C++</span><span>C</span>
+          <span>HTML</span><span>CSS</span><span>JEKYLL</span><span>LIQUID</span>
+        </div>
+      </article>
+
+      <article class="glass-card">
+        <div class="card-label">DESIGN DNA</div>
+        <div class="meter-list">
+          <div class="meter-row"><span>Ideas</span><div class="meter"><i style="--value:100%"></i></div><b>CONSTANT</b></div>
+          <div class="meter-row"><span>Detail</span><div class="meter"><i style="--value:100%"></i></div><b>MAXIMUM</b></div>
+          <div class="meter-row"><span>Lore</span><div class="meter"><i style="--value:98%"></i></div><b>EXPANDING</b></div>
+          <div class="meter-row"><span>Scope</span><div class="meter"><i style="--value:100%"></i></div><b>ESCALATING</b></div>
+        </div>
+      </article>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-alt" id="personal-life">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">PROFILE // OUTSIDE THE PROJECT DATABASE</p>
+      <h2>More Personal Stuff</h2>
+      <p>A few actual-life details that are part of who I am, not just a list of things I build.</p>
+    </div>
+
+    <div class="personal-life-grid">
+      <article class="glass-card prose">
+        <h2>The basic stuff</h2>
+        <p>I'm <strong>18</strong> and based in <strong>Texas, USA</strong>. Online, I usually go by <strong>Naki</strong>, <strong>N4-K2</strong>, or <strong>Nawkies</strong>, and those names tend to overlap with whatever I'm making at the time.</p>
+        <p>Games and creative projects are a pretty big part of how I spend my free time. I bounce between programming, map-building, writing, avatar customization, rhythm-game stuff, modding, and whatever new idea has managed to take over my brain that week.</p>
+        <p>I am very much the kind of person who gets attached to the details. If I like a game, character, mechanic, avatar, or fictional setting, I usually want to understand it, customize it, document it, rebuild part of it, or make something inspired by it.</p>
+      </article>
+
+      <article class="glass-card prose">
+        <h2>Roblox is also a fashion problem</h2>
+        <p>Roblox is not just a development platform for me. I spend a lot of time on <strong>avatar creation, outfit collecting, catalog browsing, horror games, and completely random experiences</strong>.</p>
+        <p>I've built up <strong>150+ Roblox outfits</strong>, and I change avatars often enough that one permanent look has never really been the point. A lot of the fun for me is experimenting with different themes, accessories, creature designs, and visual identities.</p>
+        <p>I also own <strong>Korblox Deathspeaker</strong>. Buying it sounded better before I actually bought it, and it became one of those purchases where the immediate reaction was basically: <em>yeah, I kind of regret that.</em></p>
+      </article>
+
+      <article class="glass-card prose">
+        <h2>Family matters to me</h2>
+        <p>I don't put much family information online, but family is still important to me. One small example is that I put real thought into writing something meaningful for my <strong>grandfather's 80th birthday</strong> instead of treating it like a generic card message.</p>
+        <p>That's probably one of the places where the storytelling side of me shows up outside fiction too: when something matters, I would rather make it personal and specific than just write the minimum and move on.</p>
+      </article>
+
+      <article class="glass-card prose">
+        <h2>How I tend to be with hobbies</h2>
+        <p>I rarely have only one interest active at once. I can be working on a giant Linglox map, changing a Roblox avatar, thinking about a Minecraft mod, charting something for a rhythm game, editing a character profile, and then deciding the website also needs another database section.</p>
+        <p>I like <strong>collecting, customizing, organizing, experimenting, and expanding things</strong>. That shows up everywhere: avatars, game systems, advancement trees, prompt maps, fictional casts, wiki pages, and even this site itself.</p>
+      </article>
+    </div>
+
+    <aside class="public-boundary-note glass-card">
+      <div class="card-label">PUBLIC PROFILE BOUNDARY</div>
+      <p>This site intentionally keeps some real-life information private. I share enough to make the profile feel like me without turning a public website into a record of every personal detail.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">PROFILE // WHAT I ACTUALLY MAKE</p>
+      <h2>Main Creative Areas</h2>
+    </div>
+    <div class="directory-grid">
+      <article class="directory-card"><span class="directory-index">01</span><h3>Roblox / Linglox</h3><p>Huge maps, prompt placement, zones, puzzles, parkour, secrets, collectibles, traps, map tooling, and experimental systems.</p></article>
+      <article class="directory-card"><span class="directory-index">02</span><h3>Minecraft Java</h3><p>Mods, advancements, educational mechanics, progression systems, puzzle concepts, and large content registries.</p></article>
+      <article class="directory-card"><span class="directory-index">03</span><h3>Writing</h3><p>Character-heavy fiction, nonhuman species, relationship arcs, LitRPG/progression ideas, canon tracking, and very large character bibles.</p></article>
+      <article class="directory-card"><span class="directory-index">04</span><h3>Tools &amp; Automation</h3><p>Importers, converters, generators, scripts, data processing, web tools, and anything that removes repetitive work from a project.</p></article>
+      <article class="directory-card"><span class="directory-index">05</span><h3>Rhythm / Charting</h3><p>Just Dance, FNF-related projects, osu!mania charting, song timing, scroll-speed changes, and music-driven game mechanics.</p></article>
+      <article class="directory-card"><span class="directory-index">06</span><h3>Web / Databases</h3><p>Sites like this one: dark, searchable, data-driven, over-detailed, and designed to hold much more information than a normal bio page.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">PROFILE // CURRENT MAJOR PROJECTS</p>
+      <h2>Project Constellation</h2>
+    </div>
+    <div class="project-grid">
+      {% for project in site.projects %}
+        {% include cards/project-card.html project=project %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">TAHAUFYA // WRITER REFERENCE</p>
+      <h2>Character Bible</h2>
+      <p>The full current-cast-only bible is part of the site, including all 25 active dossiers.</p>
+    </div>
+    <div class="section-actions">
+      <a class="button button-primary" href="{{ '/character-bible/' | relative_url }}">OPEN CHARACTER BIBLE</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">PROFILE // PUBLIC LINKS</p>
+      <h2>Where I Am Online</h2>
+      <p>These are the public profiles I actually use for code, Roblox, and writing.</p>
+    </div>
+    <div class="link-grid">
+      {% for link in site.data.links %}
+        {% include cards/link-card.html link=link %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- OUTSIDE_THE_NOISE_HINT: the author profile is not the only profile that learned your name -->

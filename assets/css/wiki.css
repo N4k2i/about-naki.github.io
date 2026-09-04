@@ -1,0 +1,412 @@
+/* ==========================================================
+   Wiki / knowledge-base UI
+   ========================================================== */
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: .68rem;
+}
+
+.breadcrumbs a:hover {
+  color: var(--purple-0);
+}
+
+.wiki-record-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.wiki-main {
+  min-width: 0;
+}
+
+.wiki-sidebar-stack {
+  position: sticky;
+  top: 6.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.wiki-article {
+  width: 100%;
+  max-width: none;
+}
+
+.wiki-meta {
+  padding: 1.2rem;
+}
+
+.meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+}
+
+.meta-tags a {
+  padding: .22rem .4rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--purple-0);
+  font-family: var(--font-mono);
+  font-size: .62rem;
+}
+
+.wiki-tools {
+  display: grid;
+  padding: 1.2rem;
+}
+
+.wiki-tools a,
+.wiki-tools button {
+  padding: .65rem 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  background: transparent;
+  color: var(--text-1);
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  text-align: left;
+}
+
+.wiki-tools a:hover,
+.wiki-tools button:hover {
+  color: var(--purple-0);
+}
+
+.wiki-related,
+.wiki-backlinks {
+  margin-top: 2rem;
+}
+
+.compact-heading {
+  margin-bottom: 1rem;
+}
+
+.compact-heading h2 {
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: .8rem;
+}
+
+.related-card {
+  display: grid;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.related-card:hover {
+  border-color: var(--border-strong);
+  background: rgba(143,103,255,.06);
+}
+
+.related-card small {
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: .62rem;
+}
+
+.related-card strong {
+  margin-top: .35rem;
+}
+
+.related-card span {
+  margin-top: .45rem;
+  color: var(--text-2);
+  font-size: .75rem;
+}
+
+.backlink-list {
+  display: grid;
+  gap: .5rem;
+}
+
+.backlink-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,.02);
+}
+
+.backlink-item:hover {
+  border-color: var(--border-strong);
+}
+
+.backlink-item small {
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: .62rem;
+}
+
+.wiki-namespace-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1rem;
+}
+
+.namespace-card {
+  min-height: 250px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(143,103,255,.11), transparent 14rem),
+    var(--surface);
+}
+
+.namespace-card > span {
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: .65rem;
+}
+
+.namespace-card h2 {
+  margin-top: 3rem;
+  font-size: clamp(1.7rem,4vw,2.8rem);
+}
+
+.namespace-card p {
+  margin-top: .7rem;
+  color: var(--text-1);
+}
+
+.namespace-card strong {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--purple-0);
+  font-family: var(--font-mono);
+  font-size: .68rem;
+}
+
+.wiki-filterbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.wiki-count {
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: .7rem;
+}
+
+.record-index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1rem;
+}
+
+.record-index-card {
+  min-height: 250px;
+  padding: 1.3rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.record-index-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+}
+
+.record-index-card > small {
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: .62rem;
+}
+
+.record-index-card h2 {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  letter-spacing: -.035em;
+}
+
+.record-index-card > p {
+  margin-top: .55rem;
+  color: var(--text-2);
+  font-size: .82rem;
+}
+
+.gallery-placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: .8rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(135deg, rgba(143,103,255,.07), rgba(255,61,175,.04));
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: .65rem;
+}
+
+.tag-index-cloud a {
+  padding: .7rem .9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,.025);
+  color: var(--text-1);
+  font-family: var(--font-mono);
+  font-size: .76rem;
+}
+
+.tag-section {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 1000px) {
+  .wiki-record-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-sidebar-stack {
+    position: static;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .record-index-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .wiki-namespace-grid,
+  .record-index-grid,
+  .related-grid,
+  .wiki-sidebar-stack,
+  .gallery-placeholder-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.meta-list-row { align-items: start; }
+.meta-list { display: grid; gap: .35rem; margin: 0; padding: 0; list-style: none; }
+.meta-list li { color: var(--text-1); font-size: .78rem; line-height: 1.45; }
+.meta-list li::before { content: "— "; color: var(--purple-1); }
+
+/* ==========================================================
+   TAHAUFYA Character Bible
+   ========================================================== */
+.bible-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, .5fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.bible-source-note {
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: rgba(143, 103, 255, .06);
+  color: var(--text-1);
+  line-height: 1.65;
+}
+
+.bible-web-dossier {
+  min-width: 0;
+  padding: clamp(1rem, 2vw, 1.6rem);
+}
+
+/*
+   Dossier text originated from a PDF transcript. `pre-wrap` preserved the
+   PDF's huge alignment-space runs, which created fake columns and severely
+   fragmented long sentences. `pre-line` keeps meaningful line breaks while
+   collapsing those alignment spaces so the dossier reflows normally.
+*/
+.bible-transcript {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: none;
+  margin: 0;
+  overflow-x: hidden;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+  tab-size: 2;
+  color: var(--text-1);
+  font-family: var(--font-mono);
+  font-size: clamp(.78rem, 1.1vw, .92rem);
+  line-height: 1.72;
+}
+
+.bible-record-grid .record-index-card {
+  min-height: 300px;
+}
+
+.bible-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: 1rem;
+}
+
+.bible-card-meta span {
+  padding: .3rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-2);
+  font-family: var(--font-mono);
+  font-size: .62rem;
+}
+
+.bible-pdf-frame {
+  display: block;
+  width: 100%;
+  min-height: 80vh;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--bg-1);
+}
+
+@media (max-width: 1000px) {
+  .bible-transcript {
+    font-size: .84rem;
+    line-height: 1.68;
+  }
+}
+
+@media (max-width: 800px) {
+  .bible-intro-grid { grid-template-columns: 1fr; }
+  .bible-pdf-frame { min-height: 65vh; }
+}
+
+@media (max-width: 600px) {
+  .bible-web-dossier {
+    padding: .85rem;
+  }
+
+  .bible-transcript {
+    font-size: .8rem;
+    line-height: 1.62;
+  }
+}

@@ -1,0 +1,107 @@
+title: OUTSIDE THE NOISE
+subtitle: 'A TAHAUFYA: Found in the Noise ARG'
+fiction_notice: This ARG is fiction. Jonathan Yaryan / Nawkies and the named family
+  members are fictionalized portrayals used only inside the story. No real address,
+  contact information, or unstated private facts are part of the ARG.
+real_world_cast:
+- name: Jonathan Yaryan
+  alias: Nawkies
+  role: author / witness / household member
+- name: Stephanie E.
+  role: family / witness
+- name: Jason W.
+  role: family / witness
+- name: Amy M.
+  role: family / witness
+- name: Shadow
+  role: house cat / sibling of Scout
+- name: Scout
+  role: house cat / sibling of Shadow
+tahaufya_count: 25
+phases:
+- number: 0
+  name: Checksum Failure
+  theme: The website notices something that should not exist.
+- number: 1
+  name: Arrivals
+  theme: Twenty-five fictional people cross the edge.
+- number: 2
+  name: The House
+  theme: Jonathan's family becomes part of the impossible.
+- number: 3
+  name: Authorship
+  theme: The characters discover the documents that define them.
+- number: 4
+  name: Outside
+  theme: A real world without records has no place prepared for them.
+- number: 5
+  name: Erasure
+  theme: Reality begins forgetting what the story remembered.
+- number: 6
+  name: The Choice
+  theme: Staying, returning, or inventing a third answer.
+- number: 7
+  name: After
+  theme: What a family remembers after impossible guests leave.
+- number: 13
+  name: ENTRY TESTS
+  theme: The archive teaches its puzzle language.
+- number: 14
+  name: HOUSE CIPHER
+  theme: Household routines hide continuity keys.
+- number: 15
+  name: CHARACTER LATTICE
+  theme: Character-bible metadata becomes a cryptographic graph.
+- number: 16
+  name: PROTOCOL MAZE
+  theme: The player reasons across contradictory evidence.
+- number: 17
+  name: NOISE ENGINE
+  theme: Expert puzzles expose compression, witness, and consensus.
+secret_codes:
+- code: THEEDGEISNOTAWALL
+  unlocks: breach
+- code: TWENTYFIVE
+  unlocks: roster
+- code: SHADOWREMEMBERS
+  unlocks: witness
+- code: HOMEISNOTCANON
+  unlocks: choice
+- code: WEWEREREALTOEACHOTHER
+  unlocks: true-ending
+puzzle_layers:
+- id: surface
+  name: Surface Archive
+  description: The obvious recovered logs.
+- id: checksum
+  name: Checksum Layer
+  description: Build errors, hashes, ordering anomalies, and source comments.
+- id: mirror
+  name: Mirror Layer
+  description: Contradictory versions that reveal what reality is trying to normalize.
+- id: remnant
+  name: Remnant Layer
+  description: Fragments from deleted or superseded continuity.
+- id: witness
+  name: Witness Layer
+  description: Independent household records used to test whether the archive is lying.
+- id: 'null'
+  name: NULL Layer
+  description: Records with no stable author, timestamp, or world of origin.
+puzzle_families:
+- Acrostic / first-letter extraction
+- Caesar shifts
+- Vigenere cipher
+- Base64 fragments
+- Binary ASCII
+- Hex ASCII
+- Book/dossier-number cipher
+- Timeline reconstruction
+- Cross-record contradiction analysis
+- HTML source comments
+- CSS class-letter extraction
+- URL fragment clues
+- Character metadata matching
+- False-answer branches
+- Checksum/hash prefix matching
+- Witness consistency voting

@@ -1,0 +1,25 @@
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <strong>N4-K2 DATABASE</strong>
+      <p>Built with Jekyll, Liquid, HTML, CSS, JavaScript, and intentional over-engineering.</p>
+    </div>
+
+    <div class="footer-meta">
+      <span>JEKYLL BUILD</span>
+      <span>© <span id="currentYear"></span> {{ site.author }}</span>
+      <a href="{{ '/directory/' | relative_url }}">SITE DIRECTORY</a>
+      <a href="#top">RETURN TO TOP ↑</a>
+    </div>
+  </div>
+  <span class="arg-signal-footer"
+        data-arg-footer-signal
+        data-arg-href="{{ '/signal/' | relative_url }}"
+        title="signal strength">
+    <i class="arg-signal-dot" aria-hidden="true"></i>
+    SIGNAL 0.0001%
+  </span>
+  <a data-arg-deep-link hidden
+       href="{{ '/signal/deep/' | relative_url }}"
+       class="arg-signal-footer">DEEP SIGNAL</a>
+</footer>

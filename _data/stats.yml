@@ -1,0 +1,21 @@
+- label: Primary Roles
+  value: '4'
+  detail: Developer, Gamer, Storyteller, Worldbuilder
+- label: Tracked Project Records
+  value: '4'
+  detail: Current public project cards in the site database
+- label: Programming Languages
+  value: 7+
+  detail: Languages used or explored
+- label: Site Generator
+  value: Jekyll
+  detail: GitHub Pages-friendly static generation
+- label: Project Scope
+  value: ↑
+  detail: Frequently increasing
+- label: Lore Capacity
+  value: ∞
+  detail: Not scientifically measured
+- label: TAHAUFYA Dossiers
+  value: '25'
+  detail: Current-cast-only character bible records

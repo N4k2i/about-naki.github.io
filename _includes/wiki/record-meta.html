@@ -1,0 +1,21 @@
+<aside class="wiki-meta glass-card">
+  <div class="card-label">{{ page.record_type | default: "RECORD" | upcase }} DATA</div>
+  <dl class="data-list">
+    {% if page.status %}<div><dt>Status</dt><dd>{{ page.status }}</dd></div>{% endif %}
+    {% if page.project %}<div><dt>Project</dt><dd>{{ page.project }}</dd></div>{% endif %}
+    {% if page.role %}<div><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
+    {% if page.gender %}<div><dt>Gender</dt><dd>{{ page.gender }}</dd></div>{% endif %}
+    {% if page.pronouns %}<div><dt>Pronouns</dt><dd>{{ page.pronouns }}</dd></div>{% endif %}
+    {% if page.age_note %}<div><dt>Age</dt><dd>{{ page.age_note }}</dd></div>{% endif %}
+    {% if page.species %}<div><dt>Species</dt><dd>{{ page.species }}</dd></div>{% endif %}
+    {% if page.kind %}<div><dt>Kind</dt><dd>{{ page.kind }}</dd></div>{% endif %}
+    {% if page.type %}<div><dt>Type</dt><dd>{{ page.type }}</dd></div>{% endif %}
+    {% if page.date %}<div><dt>Date</dt><dd>{{ page.date }}</dd></div>{% endif %}
+    {% if page.timeline_note %}<div><dt>Timeline</dt><dd>{{ page.timeline_note }}</dd></div>{% endif %}
+    {% if page.aliases %}<div><dt>Aliases</dt><dd>{{ page.aliases | join: ", " }}</dd></div>{% endif %}
+    {% if page.family %}<div class="meta-list-row"><dt>Family</dt><dd><ul class="meta-list">{% for item in page.family %}<li>{{ item }}</li>{% endfor %}</ul></dd></div>{% endif %}
+    {% if page.relationships %}<div class="meta-list-row"><dt>Relationships</dt><dd><ul class="meta-list">{% for item in page.relationships %}<li>{{ item }}</li>{% endfor %}</ul></dd></div>{% endif %}
+    {% if page.appearance %}<div class="meta-list-row"><dt>Appearance</dt><dd><ul class="meta-list">{% for item in page.appearance %}<li>{{ item }}</li>{% endfor %}</ul></dd></div>{% endif %}
+    {% if page.tags %}<div><dt>Tags</dt><dd class="meta-tags">{% for tag in page.tags %}<a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>{% endfor %}</dd></div>{% endif %}
+  </dl>
+</aside>

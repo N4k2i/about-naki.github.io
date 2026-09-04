@@ -1,0 +1,46 @@
+chains:
+  mirror:
+    steps:
+    - id: mirror-1
+      answer: NOTALLVERSIONSARELIES
+    - id: mirror-2
+      answer: THEARCHIVEEDITSBACK
+    - id: mirror-3
+      answer: REMEMBERTHEDIFFERENCE
+    final_unlock: mirror-core
+  remnant:
+    steps:
+    - id: remnant-1
+      answer: DELETEDISNOTDEAD
+    - id: remnant-2
+      answer: CANONISAMEMORYPOLICY
+    - id: remnant-3
+      answer: THEREWASALWAYSMORE
+    final_unlock: remnant-core
+  'null':
+    steps:
+    - id: null-1
+      answer: WHOISTWENTYSIX
+    - id: null-2
+      answer: NOAUTHORFOUND
+    - id: null-3
+      answer: THEGAPREMEMBERS
+    final_unlock: null-core
+  cats:
+    steps:
+    - id: cats-1
+      answer: EYESBEFOREEVIDENCE
+    - id: cats-2
+      answer: TWOWITNESSES
+    - id: cats-3
+      answer: THEYNEVERREADTHEBIBLE
+    final_unlock: cats-core
+  timeline:
+    steps:
+    - id: timeline-1
+      answer: '031254'
+    - id: timeline-2
+      answer: ELEVENSECONDS
+    - id: timeline-3
+      answer: '0001'
+    final_unlock: timeline-core

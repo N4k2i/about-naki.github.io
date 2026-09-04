@@ -1,0 +1,34 @@
+{% assign all_records = site.characters
+  | concat: site.species
+  | concat: site.lore
+  | concat: site.docs
+  | concat: site.roadmaps
+  | concat: site.galleries
+  | concat: site.changelogs
+  | concat: site.projects
+  | concat: site.writing %}
+
+{% assign backlink_count = 0 %}
+{% capture backlink_markup %}
+  {% for record in all_records %}
+    {% if record.related_ids contains page.record_id %}
+      {% assign backlink_count = backlink_count | plus: 1 %}
+      <a class="backlink-item" href="{{ record.url | relative_url }}">
+        <span>{{ record.title }}</span>
+        <small>{{ record.collection | upcase }}</small>
+      </a>
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+
+{% if backlink_count > 0 %}
+<section class="wiki-backlinks">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">BACKLINKS // {{ backlink_count }}</p>
+    <h2>Referenced By</h2>
+  </div>
+  <div class="backlink-list">
+    {{ backlink_markup }}
+  </div>
+</section>
+{% endif %}

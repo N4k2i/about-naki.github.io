@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% include sections/page-hero.html eyebrow="DEVLOG ENTRY" title=page.title description=page.description %}
+
+<section class="section section-tight">
+  <div class="shell narrow">
+    <div class="post-meta">
+      <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+      {% if page.tags %}<span>{{ page.tags | join: " • " }}</span>{% endif %}
+    </div>
+
+    <article class="prose glass-card mt-6">
+      {{ content }}
+    </article>
+  </div>
+</section>

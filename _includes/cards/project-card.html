@@ -1,0 +1,23 @@
+<article class="project-card reveal"
+  data-project-id="{{ project.slug }}"
+  data-project-tags="{{ project.tags | join: ' ' | downcase }}"
+  data-project-search="{{ project.title | append: ' ' | append: project.type | append: ' ' | append: project.status | append: ' ' | append: project.summary | append: ' ' | append: project.tags | join: ' ' | downcase | escape }}">
+
+  <div class="project-meta">
+    <span>PROJECT_{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+    <span>{{ project.status }}</span>
+  </div>
+
+  <h3>{{ project.title }}</h3>
+  <p>{{ project.summary }}</p>
+
+  <div class="tag-cloud">
+    {% for tag in project.tags %}
+      <span>{{ tag | upcase }}</span>
+    {% endfor %}
+  </div>
+
+  <div class="project-card-actions">
+    <a class="button button-ghost" href="{{ project.url | relative_url }}">OPEN RECORD</a>
+  </div>
+</article>

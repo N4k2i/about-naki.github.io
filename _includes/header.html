@@ -1,0 +1,35 @@
+<header class="site-header" id="top">
+  <div class="shell nav-shell">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+      <span class="brand-mark">N4</span>
+      <span class="brand-divider">/</span>
+      <span class="brand-copy">
+        <strong>{{ site.data.profile.display_name }}</strong>
+        <small>{{ site.data.profile.site_mode }}</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" type="button"
+            aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+
+    <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+      {% for item in site.data.navigation.primary %}
+        <a href="{{ item.url | relative_url }}"
+           {% if page.url == item.url %}class="is-active"{% endif %}>
+          {{ item.label }}
+        </a>
+      {% endfor %}
+
+      <button class="icon-button" id="commandButton" type="button" aria-label="Open command palette">
+        <span aria-hidden="true">⌘</span>
+      </button>
+
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle visual mode">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </nav>
+  </div>
+</header>

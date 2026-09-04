@@ -1,0 +1,75 @@
+primary:
+- label: Home
+  url: /
+- label: About
+  url: /about/
+- label: Projects
+  url: /projects/
+- label: Writing
+  url: /writing/
+- label: Character Bible
+  url: /character-bible/
+- label: Wiki
+  url: /wiki/
+- label: Development
+  url: /development/
+- label: Gaming
+  url: /gaming/
+- label: More
+  url: /directory/
+directory:
+- label: About Me
+  url: /about/
+  description: Full profile, interests, creative identity, and interaction notes.
+- label: Projects
+  url: /projects/
+  description: Development, Minecraft, Roblox, and other active projects.
+- label: Writing
+  url: /writing/
+  description: Long-form fiction, worldbuilding, story systems, and author notes.
+- label: Wiki
+  url: /wiki/
+  description: Characters, species, lore, and interconnected knowledge-base records.
+- label: TAHAUFYA Character Bible
+  url: /character-bible/
+  description: 'The complete current-cast-only TAHAUFYA: Found in the Noise character
+    bible with 25 full dossiers and the original PDF.'
+- label: Development
+  url: /development/
+  description: Languages, tools, development interests, and coding philosophy.
+- label: Gaming
+  url: /gaming/
+  description: Games, platforms, modding interests, and gaming-related projects.
+- label: Interests
+  url: /interests/
+  description: A broader catalog of interests, aesthetics, topics, and obsessions.
+- label: Now
+  url: /now/
+  description: What I am currently playing, building, writing, and learning.
+- label: Uses
+  url: /uses/
+  description: Software, languages, tools, platforms, and workflow notes.
+- label: FAQ
+  url: /faq/
+  description: Answers to questions that come up often.
+- label: Devlog
+  url: /devlog/
+  description: Build notes and development updates.
+- label: Links
+  url: /links/
+  description: Public profiles and external destinations.
+- label: Documentation
+  url: /docs/
+  description: Technical notes, project architecture, setup, and design documentation.
+- label: Roadmaps
+  url: /roadmaps/
+  description: Project milestones, future plans, and status tracking.
+- label: Gallery
+  url: /gallery/
+  description: Visual reference pages and image collections.
+- label: Changelog
+  url: /changelog/
+  description: A historical record of site and project changes.
+- label: Tags
+  url: /tags/
+  description: Browse the knowledge base by topic.

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}" data-theme="void">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#08070f">
+
+  <meta name="description" content="{{ page.description | default: page.summary | default: site.description | strip_html | escape }}">
+  <meta name="author" content="{{ site.author | escape }}">
+
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page.description | default: page.summary | default: site.description | strip_html | escape }}">
+  <meta property="og:type" content="website">
+
+  <title>{% if page.title %}{{ page.title }} // {{ site.data.profile.display_name }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <link rel="stylesheet" href="{{ '/assets/css/reset.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/tokens.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/layout.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/components.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/content.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/extended.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/wiki.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/arg.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/animations.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/utilities.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/advanced-utilities.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
+
+  <script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/projects.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/terminal.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/secrets.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/accessibility.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/search.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/command-palette.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/reading-progress.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/preferences.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/wiki.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/arg.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/app.js' | relative_url }}"></script>
+</head>
+
+<body{% if page.requires_age_gate %} data-page-requires-age-gate="true"{% endif %} data-page-url="{{ page.url }}">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="page-stars" id="stars" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  {% if page.url == "/" %}
+  <div class="boot-screen" id="bootScreen">
+    <div class="boot-panel">
+      <p class="eyebrow">N4-K2 SYSTEM // JEKYLL</p>
+      <div class="terminal-lines" id="bootLines" aria-live="polite"></div>
+      <button class="button button-primary" id="enterSite" type="button">ENTER DATABASE</button>
+    </div>
+  </div>
+  {% endif %}
+
+  {% include header.html %}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <dialog class="command-dialog" id="commandDialog">
+    <div class="command-shell">
+      <div class="command-header">
+        <label class="command-search">
+          <span class="sr-only">Search site commands</span>
+          <input id="commandInput" type="search" placeholder="Search pages, projects, and actions...">
+        </label>
+        <button class="dialog-close" id="commandClose" type="button" aria-label="Close command palette">×</button>
+      </div>
+      <div class="command-results" id="commandResults"></div>
+      <div class="command-footer">
+        <span><kbd>↑</kbd><kbd>↓</kbd> move</span>
+        <span><kbd>Enter</kbd> open</span>
+        <span><kbd>Esc</kbd> close</span>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+  <script type="application/json" id="siteSearchData">
+  [
+    {% assign search_items = site.pages
+      | concat: site.projects
+      | concat: site.writing
+      | concat: site.characters
+      | concat: site.species
+      | concat: site.lore
+      | concat: site.docs
+      | concat: site.roadmaps
+      | concat: site.galleries
+      | concat: site.changelogs
+      | concat: site.tahaufya_bible %}
+    {% for item in search_items %}
+      {
+        "title": {{ item.title | default: site.title | jsonify }},
+        "url": {{ item.url | relative_url | jsonify }},
+        "type": {{ item.collection | default: "page" | jsonify }},
+        "description": {{ item.description | default: item.summary | default: "" | strip_html | strip_newlines | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+  </script>
+  <a class="arg-hidden-entry button button-ghost" data-arg-hidden-entry
+     href="{{ '/signal/' | relative_url }}">UNINDEXED SIGNAL</a>
+  <!-- build note: there is no /signal/ directory in the navigation -->
+
+  <div class="arg-age-gate-overlay" data-arg-age-gate-overlay hidden>
+    <div class="arg-age-gate-card">
+      <p class="arg-terminal-label">18+ ARCHIVE LOCKED</p>
+      <h2>Age verification required</h2>
+      <p>
+        This section contains adult-oriented material and is available only to visitors who confirm
+        they are at least 18 years old.
+      </p>
+      <a class="button button-primary"
+         href="{{ '/signal/settings/' | relative_url }}">VERIFY AGE</a>
+      <a class="button button-ghost"
+         href="{{ '/signal/' | relative_url }}">RETURN TO STANDARD ARG</a>
+    </div>
+  </div>
+
+</body>
+</html>

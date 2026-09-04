@@ -1,0 +1,22 @@
+software:
+  - name: "Visual Studio Code"
+    use: "General code editing and project work"
+  - name: "GitHub"
+    use: "Source control, repositories, and GitHub Pages"
+  - name: "Git"
+    use: "Version control"
+  - name: "Jekyll"
+    use: "Static site generation"
+  - name: "Minecraft Java Edition"
+    use: "Playing, testing, and mod development"
+  - name: "Roblox"
+    use: "Playing, experimentation, and platform projects"
+
+workflow:
+  - "Start with an idea"
+  - "Make a prototype"
+  - "Add structure"
+  - "Add progression"
+  - "Add achievements"
+  - "Add lore"
+  - "Discover that the project is now much bigger"

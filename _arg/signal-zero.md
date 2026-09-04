@@ -1,0 +1,48 @@
+---
+title: Signal Approaches Zero
+subtitle: The archive begins counting down.
+arg_id: P5-10-SIGNAL-ZERO
+phase: 5
+order: 10
+log_number: '5.10'
+record_type: ERASURE RECORD
+signal_strength: 44%
+requires:
+- witness
+timestamp: DAY 15 // 14:22:00
+prev_slug: not-a-backup
+next_slug: the-vote
+sitemap: false
+tags:
+- arg
+- outside-the-noise
+- tahaufya
+- phase-5
+content_warning: Memory loss, existential erasure, grief and fear of disappearance.
+---
+
+A new indicator appeared in the footer.
+
+`SIGNAL STRENGTH`.
+
+It fell every night.
+
+83%. 79%. 74%. 68%.
+
+Jonathan changed the CSS. The number returned.
+
+At 51%, everyone dreamed about the same hallway.
+
+At 38%, cameras stopped capturing the cast entirely.
+
+At 25%, one build briefly contained only twenty-four dossiers.
+
+At 19%, Shadow and Scout refused to leave the living room.
+
+At 13%, Naki said the sentence that became the fourth key:
+
+**HOME IS NOT CANON.**
+
+Jonathan asked what he meant.
+
+"It means we might have to choose it anyway."

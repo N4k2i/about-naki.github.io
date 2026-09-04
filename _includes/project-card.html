@@ -1,0 +1,49 @@
+<article class="project-card reveal is-visible"
+         data-project-id="{{ project.id }}"
+         data-project-tags="{{ project.tags | join: ' ' | downcase }}"
+         data-project-search="{{ project.title | append: ' ' | append: project.type | append: ' ' | append: project.status | append: ' ' | append: project.summary | append: ' ' | append: project.tags | join: ' ' | downcase | escape }}">
+  <div class="project-meta">
+    <span>PROJECT_{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+    <span>{{ project.status }}</span>
+  </div>
+
+  <h3>{{ project.title }}</h3>
+  <p>{{ project.summary }}</p>
+
+  <div class="tag-cloud">
+    {% for tag in project.tags %}
+      <span>{{ tag | upcase }}</span>
+    {% endfor %}
+  </div>
+
+  <button class="button button-ghost"
+          type="button"
+          data-open-project="{{ project.id }}">
+    OPEN RECORD
+  </button>
+
+  <template id="project-template-{{ project.id }}">
+    <div class="dialog-inner">
+      <p class="eyebrow">PROJECT RECORD</p>
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.details }}</p>
+
+      <div class="dialog-meta">
+        <div>
+          <small>TYPE</small>
+          <strong>{{ project.type }}</strong>
+        </div>
+        <div>
+          <small>STATUS</small>
+          <strong>{{ project.status }}</strong>
+        </div>
+      </div>
+
+      <div class="tag-cloud">
+        {% for tag in project.tags %}
+          <span>{{ tag | upcase }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </template>
+</article>

@@ -1,0 +1,331 @@
+---
+layout: default
+title: "Naki // N4-K2"
+description: "Developer • Gamer • Storyteller • Worldbuilder"
+---
+
+<section class="hero section" id="home">
+  <div class="shell hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">IDENTITY RECORD // ACTIVE</p>
+      <h1>
+        <span class="hero-hello">HEY, I'M</span>
+        <span class="gradient-text">{{ site.data.profile.display_name | upcase }}</span>
+      </h1>
+
+      <p class="hero-aliases">
+        {% for alias in site.data.profile.aliases %}
+          {{ alias }}{% unless forloop.last %} <span>•</span> {% endunless %}
+        {% endfor %}
+      </p>
+
+      <p class="hero-lede">
+        {% for role in site.data.profile.roles %}
+          {{ role }}{% unless forloop.last %} • {% endunless %}
+        {% endfor %}
+      </p>
+
+      <p class="hero-description">
+        {{ site.data.profile.short_bio }}
+        I like building systems, worlds, mods, games, tools, and projects
+        that tend to become much larger than their original scope.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ '/about/' | relative_url }}">EXPLORE PROFILE</a>
+        <a class="button button-ghost" href="{{ '/projects/' | relative_url }}">VIEW PROJECTS</a>
+        <button class="button button-ghost" type="button" id="heroCommandButton">SEARCH SITE</button>
+      </div>
+
+      <div class="hero-tags">
+        <span>JAVA</span>
+        <span>LUAU</span>
+        <span>PYTHON</span>
+        <span>JAVASCRIPT</span>
+        <span>JEKYLL</span>
+        <span>WORLDBUILDING</span>
+        <span>MINECRAFT</span>
+        <span>ROBLOX</span>
+      </div>
+    </div>
+
+    <aside class="status-terminal reveal">
+      <div class="terminal-topbar">
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span>profile.status</span>
+      </div>
+
+      <div class="terminal-body">
+        <p><span class="terminal-key">STATUS</span><span class="status-online">{{ site.data.profile.status }}</span></p>
+        <p><span class="terminal-key">ACTIVITY</span><span>{{ site.data.profile.activity }}</span></p>
+        <p><span class="terminal-key">PROJECTS</span><span>{{ site.projects | size }} tracked</span></p>
+        <p><span class="terminal-key">WRITING</span><span>{{ site.writing | size }} archives</span></p>
+        <p><span class="terminal-key">BRAIN</span><button class="terminal-secret" data-secret="tabs">{{ site.data.profile.brain }}</button></p>
+        <p><span class="terminal-key">ALIGNMENT</span><span>{{ site.data.profile.alignment }}</span></p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-divider">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">DATABASE // OVERVIEW</p>
+      <h2>At a Glance</h2>
+      <p>A few extremely scientific statistics about the person behind the website.</p>
+    </div>
+
+    <div class="currently-grid">
+      {% for stat in site.data.stats %}
+        {% include cards/stat-card.html stat=stat %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">KNOWLEDGE BASE // WIKI</p>
+      <h2>Connected Records</h2>
+      <p>
+        Characters, species, lore, documentation, roadmaps, galleries, and
+        change history live in interconnected Jekyll collections.
+      </p>
+    </div>
+
+    <div class="wiki-namespace-grid">
+      <a class="namespace-card reveal" href="{{ '/wiki/characters/' | relative_url }}">
+        <span>CHARACTERS // {{ site.characters | size }}</span>
+        <h2>Character Wiki</h2>
+        <p>Identity, relationships, roles, project continuity, and linked lore.</p>
+        <strong>OPEN RECORDS →</strong>
+      </a>
+
+      <a class="namespace-card reveal" href="{{ '/wiki/species/' | relative_url }}">
+        <span>SPECIES // {{ site.species | size }}</span>
+        <h2>Species Wiki</h2>
+        <p>Shared appearance rules, biology, traits, and canon distinctions.</p>
+        <strong>OPEN RECORDS →</strong>
+      </a>
+
+      <a class="namespace-card reveal" href="{{ '/wiki/lore/' | relative_url }}">
+        <span>LORE // {{ site.lore | size }}</span>
+        <h2>Lore Archive</h2>
+        <p>Systems, territories, continuity rules, project hubs, and world concepts.</p>
+        <strong>OPEN RECORDS →</strong>
+      </a>
+
+      <a class="namespace-card reveal" href="{{ '/docs/' | relative_url }}">
+        <span>DOCS // {{ site.docs | size }}</span>
+        <h2>Documentation</h2>
+        <p>Site architecture and Minecraft project design documentation.</p>
+        <strong>OPEN DOCS →</strong>
+      </a>
+    </div>
+
+    <div class="section-actions reveal">
+      <a class="button button-primary" href="{{ '/wiki/' | relative_url }}">OPEN KNOWLEDGE BASE</a>
+      <a class="button button-ghost" href="{{ '/tags/' | relative_url }}">BROWSE TAGS</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">DIRECTORY // FEATURED</p>
+      <h2>Explore the Database</h2>
+      <p>The site is split into dedicated sections instead of forcing everything into one endless homepage.</p>
+    </div>
+
+    <div class="directory-grid">
+      {% for item in site.data.navigation.directory limit: 8 %}
+        <a class="directory-card reveal" href="{{ item.url | relative_url }}">
+          <span class="directory-index">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>
+          <h3>{{ item.label }}</h3>
+          <p>{{ item.description }}</p>
+          <span class="directory-arrow">OPEN →</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">DATABASE // PROJECTS</p>
+      <h2>Featured Projects</h2>
+      <p>A selection of the main things currently taking up space in my brain.</p>
+    </div>
+
+    <div class="project-grid">
+      {% for project in site.projects %}
+        {% include cards/project-card.html project=project %}
+      {% endfor %}
+    </div>
+
+    <div class="section-actions reveal">
+      <a class="button button-primary" href="{{ '/projects/' | relative_url }}">FULL PROJECT DATABASE</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">PROFILE // INTEREST MATRIX</p>
+      <h2>Things I Can Talk About for Too Long</h2>
+    </div>
+
+    <div class="interest-grid">
+      <article class="feature-card reveal">
+        <div class="feature-number">01</div>
+        <h3>Development</h3>
+        <p>Programming, tools, modding, game systems, automation, websites, and interactive experiments.</p>
+        <div class="tag-cloud">
+          {% for language in site.data.skills.languages %}
+            <span>{{ language.name | upcase }}</span>
+          {% endfor %}
+        </div>
+      </article>
+
+      <article class="feature-card reveal">
+        <div class="feature-number">02</div>
+        <h3>Gaming</h3>
+        <p>Minecraft, Roblox, Linglox, Deltarune, progression, puzzles, customization, and systems-heavy games.</p>
+        <div class="tag-cloud">
+          {% for game in site.data.games limit: 5 %}
+            <span>{{ game.name | upcase }}</span>
+          {% endfor %}
+        </div>
+      </article>
+
+      <article class="feature-card reveal">
+        <div class="feature-number">03</div>
+        <h3>Writing</h3>
+        <p>Characters, species, relationships, progression fantasy, lore, canon tracking, and long-form worldbuilding.</p>
+        <div class="tag-cloud">
+          <span>FICTION</span>
+          <span>LORE</span>
+          <span>CHARACTERS</span>
+          <span>WORLDBUILDING</span>
+        </div>
+      </article>
+
+      <article class="feature-card reveal">
+        <div class="feature-number">04</div>
+        <h3>Aesthetics</h3>
+        <p>Cosmic, void, glitch, eldritch, cyber, dark fantasy, neon, databanks, terminals, and layered interface design.</p>
+        <div class="tag-cloud">
+          {% for aesthetic in site.data.aesthetics limit: 8 %}
+            <span>{{ aesthetic | upcase }}</span>
+          {% endfor %}
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">DOCUMENTED PHENOMENON</p>
+      <h2>How a Naki Project Works</h2>
+    </div>
+
+    <ol class="timeline">
+      <li class="reveal"><b>01</b><span>Have small idea.</span></li>
+      <li class="reveal"><b>02</b><span>Start making small idea.</span></li>
+      <li class="reveal"><b>03</b><span>Add one feature.</span></li>
+      <li class="reveal"><b>04</b><span>Realize feature needs another feature.</span></li>
+      <li class="reveal"><b>05</b><span>Create progression system.</span></li>
+      <li class="reveal"><b>06</b><span>Add achievements.</span></li>
+      <li class="reveal"><b>07</b><span>Add lore.</span></li>
+      <li class="reveal"><b>08</b><span>Add several hundred more things.</span></li>
+      <li class="reveal"><b>09</b><span>Project scope reaches questionable levels.</span></li>
+      <li class="reveal"><b>10</b><span>Make a database to keep track of it.</span></li>
+      <li class="reveal"><b>11</b><span>Expand the database.</span></li>
+      <li class="reveal"><b>12</b><span>“Okay, now what else is missing?”</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">LIVE RECORD</p>
+      <h2>Currently</h2>
+      <p>What is happening right now, or at least recently enough to be worth putting on the website.</p>
+    </div>
+
+    <div class="currently-grid">
+      {% for item in site.data.now.items %}
+        <article class="mini-card reveal">
+          <span>{{ item.label }}</span>
+          <strong>{{ item.value }}</strong>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="section-actions reveal">
+      <a class="button button-ghost" href="{{ '/now/' | relative_url }}">OPEN FULL NOW PAGE</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell narrow">
+    <div class="section-heading reveal">
+      <p class="eyebrow">FAQ // PREVIEW</p>
+      <h2>Questions</h2>
+    </div>
+
+    <div class="accordion" data-accordion>
+      {% for item in site.data.faq limit: 6 %}
+        <details class="reveal">
+          <summary>{{ item.question }}</summary>
+          <div><p>{{ item.answer }}</p></div>
+        </details>
+      {% endfor %}
+    </div>
+
+    <div class="section-actions reveal">
+      <a class="button button-ghost" href="{{ '/faq/' | relative_url }}">FULL FAQ</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="links">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">EXTERNAL CONNECTIONS</p>
+      <h2>Find Me</h2>
+    </div>
+
+    <div class="link-grid">
+      {% for link in site.data.links %}
+        {% include cards/link-card.html link=link %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section secret-section" id="secret" hidden>
+  <div class="shell narrow">
+    <div class="achievement-card">
+      <p class="eyebrow">ACHIEVEMENT UNLOCKED</p>
+      <h2>CURIOUS CREATURE</h2>
+      <p>You clicked something that probably did not need to be clicked.</p>
+      <div class="achievement-points">
+        <span>+10 Curiosity</span>
+        <span>+5 Lore</span>
+        <span>+1 Browser Tab</span>
+      </div>
+      <button class="button button-primary" id="closeSecret" type="button">RETURN TO DATABASE</button>
+    </div>
+  </div>
+</section>
