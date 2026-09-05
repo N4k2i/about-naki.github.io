@@ -17,7 +17,7 @@ tags:
 - phase-15
 - puzzle-network
 - hard
-puzzle_answer: KJGA
+puzzle_answer: KGAC
 puzzle_unlock: pz-20
 difficulty: hard
 puzzle_type: per-letter Caesar
@@ -27,4 +27,4 @@ prev_slug: lattice-primes
 next_slug: lattice-relationship
 ---
 
-Take initials of James, Isaac, Fear, Zucchi: J I F Z. Shift each forward by 1.
+Take initials of James, Fear, Zucchi, Blurb: J F Z B. Shift each forward by 1.

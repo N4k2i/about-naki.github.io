@@ -41,10 +41,10 @@ the repository and found no copy of the sentence. He deleted the build output co
 next build placed the sentence inside the character-bible index, directly between Naki's dossier
 and Mako's.
 
-The strangest part was the character count. The source said twenty-five active dossiers.
-The generated page briefly said twenty-six.
+The strangest part was the character count. The source said twenty-four active dossiers.
+The generated page briefly said twenty-five.
 
-The twenty-sixth entry had no name.
+The twenty-fifth entry had no name.
 
 `LOCATION: OUTSIDE`
 

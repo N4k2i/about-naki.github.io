@@ -1,6 +1,6 @@
 ---
 title: NULL INDEX
-subtitle: The twenty-sixth record is not a character.
+subtitle: The twenty-fifth record is not a character.
 arg_id: P11-000-NULL-INDEX
 phase: 11
 order: 0
@@ -28,19 +28,19 @@ requires_age_gate: true
 
 <div class="arg-mature-banner"><strong>18+ ARCHIVE</strong> — This is the mature version of the record. <a href="{{ '/signal/null-index/' | relative_url }}">View standard version</a>.</div>
 
-The first checksum failure showed twenty-six entries.
+The first checksum failure showed twenty-five entries.
 
-The current-cast bible has twenty-five.
+The current-cast bible has twenty-four.
 
 For most of the ARG, the obvious question is:
 
-**Who is twenty-six?**
+**Who is twenty-five?**
 
 The NULL Layer answers:
 
 Wrong question.
 
-The twenty-sixth slot has no stable name, pronouns, species, age, role, or voice.
+The twenty-fifth slot has no stable name, pronouns, species, age, role, or voice.
 
 It appears only when a system expects one more entity than the story contains.
 
@@ -50,7 +50,7 @@ It is a **gap given an ID**.
 
 The first puzzle key is literal:
 
-`WHO IS TWENTY SIX`
+`WHO IS TWENTY FIVE`
 
 Remove spaces.
 

@@ -21,7 +21,7 @@ tags:
 content_warning: Authorship, identity, memory discontinuity, accountability.
 ---
 
-The file was **212 pages**.
+The file was enormous.
 
 Jonathan had built it to keep the cast consistent: Locked Canon, Bible Expansion, Open Field.
 A system designed to prevent contradictions.

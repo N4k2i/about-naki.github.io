@@ -21,7 +21,7 @@ tags:
 - phase-7
 - letter
 prev_slug: letter-markov
-next_slug: letter-isaac
+next_slug: letter-fear
 mature_mode: true
 standard_slug: letter-amy
 requires_age_gate: true

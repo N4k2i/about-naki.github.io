@@ -1,11 +1,11 @@
 ---
-title: Twenty-Five Voices
+title: Twenty-Four Voices
 subtitle: The cast records themselves so the site cannot summarize them into silence.
-arg_id: P5-04-TWENTY-FIVE-VOICES
+arg_id: P5-04-TWENTY-FOUR-VOICES
 phase: 5
 order: 4
 log_number: '5.04'
-record_type: ERASURE RECORD
+record_type: 18+ ERASURE RECORD
 signal_strength: 41%
 requires:
 - witness
@@ -18,8 +18,15 @@ tags:
 - outside-the-noise
 - tahaufya
 - phase-5
-content_warning: Memory loss, existential erasure, grief and fear of disappearance.
+content_warning: '18+ mode: stronger violence/consequences, profanity, severe psychological
+  distress, death, grief, and disturbing themes. Memory loss, existential erasure,
+  grief and fear of disappearance.'
+mature_mode: true
+standard_slug: twenty-four-voices
+requires_age_gate: true
 ---
+
+<div class="arg-mature-banner"><strong>18+ ARCHIVE</strong> — This is the mature version of the record. <a href="{{ '/signal/twenty-four-voices/' | relative_url }}">View standard version</a>.</div>
 
 Each character chose one sentence.
 
@@ -31,7 +38,6 @@ Each character chose one sentence.
 **Ivan:** You don't get to erase me because I am difficult to keep.  
 **Markov:** Adoptive is not an asterisk.  
 **Amy:** There are two Amys and neither is the fake one.  
-**Isaac:** Useful is something I do, not all I am.  
 **Fear:** Do not explain me after I am gone.  
 **Zucchi:** Keep the unfinished drawings.  
 **Blurb:** Knowing somebody a long time doesn't mean you finished knowing them.  
@@ -54,3 +60,13 @@ The recordings became the largest stable set of files in the ARG.
 Reading is not resurrection.
 
 It is witness.
+
+---
+
+## 18+ ERASURE LAYER
+
+The erasure is more frightening in this archive. People lose seconds, then names, then the ability to trust their own
+memory. Panic attacks, dissociation, rage, and helplessness become common. A character can be touching somebody's hand
+while that person sincerely insists nobody is there.
+
+The horror is not gore. It is being alive while the people who love you become neurologically unable to recognize you.

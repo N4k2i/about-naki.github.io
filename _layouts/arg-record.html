@@ -2,6 +2,52 @@
 layout: default
 ---
 
+{% assign canon_title = page.title | replace: 'Twenty-Five', 'Twenty-Four' | replace: 'Twenty-five', 'Twenty-four' | replace: 'twenty-five', 'twenty-four' | replace: 'Twenty-Six', 'Twenty-Five' | replace: 'Twenty-six', 'Twenty-five' | replace: 'twenty-six', 'twenty-five' | replace: '26th', '25th' %}
+{% assign canon_subtitle = page.subtitle | replace: 'Twenty-Five', 'Twenty-Four' | replace: 'Twenty-five', 'Twenty-four' | replace: 'twenty-five', 'twenty-four' | replace: 'Twenty-Six', 'Twenty-Five' | replace: 'Twenty-six', 'Twenty-five' | replace: 'twenty-six', 'twenty-five' | replace: '26th', '25th' %}
+{% assign canon_content = content | replace: 'TWENTYFIVE', 'TWENTYFOUR' | replace: 'TWENTY FIVE', 'TWENTY FOUR' | replace: 'Twenty-Five', 'Twenty-Four' | replace: 'Twenty-five', 'Twenty-four' | replace: 'twenty-five', 'twenty-four' | replace: 'TWENTYSIX', 'TWENTYFIVE' | replace: 'TWENTY SIX', 'TWENTY FIVE' | replace: 'Twenty-Six', 'Twenty-Five' | replace: 'Twenty-six', 'Twenty-five' | replace: 'twenty-six', 'twenty-five' | replace: '26th', '25th' | replace: 'slot 26', 'slot 25' | replace: 'Slot 26', 'Slot 25' %}
+{% assign display_title = canon_title %}
+{% assign display_log_number = page.log_number %}
+{% assign display_timestamp = page.timestamp %}
+
+{% if page.phase == 1 and page.order > 8 %}
+  {% assign arrival_number = page.order %}
+  {% assign title_parts = canon_title | split: ':' %}
+  {% assign arrival_name = title_parts | last %}
+  {% if arrival_number < 10 %}
+    {% capture display_title %}Arrival 0{{ arrival_number }}:{{ arrival_name }}{% endcapture %}
+  {% else %}
+    {% capture display_title %}Arrival {{ arrival_number }}:{{ arrival_name }}{% endcapture %}
+  {% endif %}
+  {% assign log_index = page.order | minus: 1 %}
+  {% if log_index < 10 %}
+    {% capture display_log_number %}1.0{{ log_index }}{% endcapture %}
+  {% else %}
+    {% capture display_log_number %}1.{{ log_index }}{% endcapture %}
+  {% endif %}
+  {% assign old_dossier = page.order | plus: 1 %}
+  {% assign new_dossier = page.order %}
+  {% capture old_dossier_label %}Dossier {{ old_dossier }}.{% endcapture %}
+  {% capture new_dossier_label %}Dossier {{ new_dossier }}.{% endcapture %}
+  {% assign canon_content = canon_content | replace: old_dossier_label, new_dossier_label %}
+{% endif %}
+
+{% if page.phase == 7 and page.tags contains 'letter' and page.order > 17 %}
+  {% assign letter_number = page.order | minus: 9 %}
+  {% assign title_parts = canon_title | split: ':' %}
+  {% assign letter_name = title_parts | last %}
+  {% if letter_number < 10 %}
+    {% capture display_title %}Letter 0{{ letter_number }}:{{ letter_name }}{% endcapture %}
+  {% else %}
+    {% capture display_title %}Letter {{ letter_number }}:{{ letter_name }}{% endcapture %}
+  {% endif %}
+  {% assign log_index = page.order | minus: 1 %}
+  {% capture display_log_number %}7.{{ log_index }}{% endcapture %}
+  {% assign old_message = page.order | minus: 8 %}
+  {% capture old_message_label %}MESSAGE {{ old_message }}{% endcapture %}
+  {% capture new_message_label %}MESSAGE {{ letter_number }}{% endcapture %}
+  {% assign display_timestamp = page.timestamp | replace: old_message_label, new_message_label %}
+{% endif %}
+
 <article class="arg-page"
          data-arg-id="{{ page.arg_id }}"
          data-arg-phase="{{ page.phase }}"
@@ -17,7 +63,7 @@ layout: default
         <span>/</span>
         <span>PHASE {{ page.phase }}</span>
         <span>/</span>
-        <span>{{ page.log_number }}</span>
+        <span>{{ display_log_number }}</span>
       </nav>
 
       <p class="arg-kicker">
@@ -25,8 +71,8 @@ layout: default
         // SIGNAL {{ page.signal_strength | default: "UNSTABLE" }}
       </p>
 
-      <h1>{{ page.title }}</h1>
-      {% if page.subtitle %}<p class="arg-subtitle">{{ page.subtitle }}</p>{% endif %}
+      <h1>{{ display_title }}</h1>
+      {% if page.subtitle %}<p class="arg-subtitle">{{ canon_subtitle }}</p>{% endif %}
 
       <div class="arg-mode-switch">
         {% if page.mature_mode %}
@@ -41,8 +87,8 @@ layout: default
       <div class="arg-header-meta">
         <span>ARG ID: {{ page.arg_id }}</span>
         <span>PHASE: {{ page.phase }}</span>
-        <span>LOG: {{ page.log_number }}</span>
-        {% if page.timestamp %}<span>STAMP: {{ page.timestamp }}</span>{% endif %}
+        <span>LOG: {{ display_log_number }}</span>
+        {% if page.timestamp %}<span>STAMP: {{ display_timestamp }}</span>{% endif %}
       </div>
     </div>
   </header>
@@ -72,7 +118,7 @@ layout: default
         </aside>
         {% endif %}
 
-        <article class="arg-prose prose glass-card">{{ content }}</article>
+        <article class="arg-prose prose glass-card">{{ canon_content }}</article>
 
         {% if page.clue %}
         <aside class="arg-clue-card">
@@ -93,7 +139,6 @@ layout: default
           <p class="arg-code-feedback" data-arg-code-feedback aria-live="polite"></p>
         </aside>
         {% endif %}
-
 
         {% if page.puzzle_answer %}
         <aside class="arg-code-panel arg-page-puzzle" data-arg-page-answer="{{ page.puzzle_answer | escape }}" data-arg-page-alt="{{ page.puzzle_alt_answers | join: '||' | escape }}" data-arg-page-unlock="{{ page.puzzle_unlock | default: page.arg_id | escape }}">

@@ -19,7 +19,7 @@ tags:
 - phase-7
 - letter
 prev_slug: letter-markov
-next_slug: letter-isaac
+next_slug: letter-fear
 ---
 
 The file arrived after the doorway stabilized.

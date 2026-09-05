@@ -20,7 +20,7 @@ chains:
   'null':
     steps:
     - id: null-1
-      answer: WHOISTWENTYSIX
+      answer: WHOISTWENTYFIVE
     - id: null-2
       answer: NOAUTHORFOUND
     - id: null-3

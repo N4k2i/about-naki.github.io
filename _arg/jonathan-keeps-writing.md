@@ -10,7 +10,7 @@ signal_strength: 40%
 requires:
 - witness
 timestamp: DAY 13 // 23:47:00
-prev_slug: twenty-five-voices
+prev_slug: twenty-four-voices
 next_slug: amy-and-amy
 sitemap: false
 tags:

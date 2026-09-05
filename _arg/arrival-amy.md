@@ -10,7 +10,7 @@ signal_strength: 82%
 requires: []
 timestamp: DAY 0 // 04:06:42
 prev_slug: arrival-markov
-next_slug: arrival-isaac
+next_slug: arrival-fear
 sitemap: false
 tags:
 - arg
@@ -51,7 +51,7 @@ Then the line labeled **NEEDS**:
 There was no correct reaction. Some laughed. Some went quiet. Some argued with the wording.
 The most unsettling response was recognition.
 
-By dawn, the house contained twenty-five people who remembered being fictional and six real-world
+By dawn, the house contained twenty-four people who remembered being fictional and six real-world
 witnesses who could no longer agree on what the word *fictional* was supposed to mean.
 
 Shadow and Scout continued making their own determinations.

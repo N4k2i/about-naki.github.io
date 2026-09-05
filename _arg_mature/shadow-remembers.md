@@ -11,7 +11,7 @@ requires:
 - witness
 timestamp: DAY 13 // 17:33:00
 prev_slug: site-as-anchor
-next_slug: twenty-five-voices
+next_slug: twenty-four-voices
 sitemap: false
 tags:
 - arg

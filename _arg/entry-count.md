@@ -17,7 +17,7 @@ tags:
 - phase-13
 - puzzle-network
 - beginner
-puzzle_answer: TWENTYFIVE
+puzzle_answer: TWENTYFOUR
 puzzle_unlock: pz-07
 difficulty: beginner
 puzzle_type: metadata
@@ -27,4 +27,4 @@ prev_slug: entry-reverse
 next_slug: entry-cats
 ---
 
-The current-cast bible contains 25 active dossiers. Spell that number as one word.
+The current-cast bible contains 24 active dossiers. Spell that number as one word.

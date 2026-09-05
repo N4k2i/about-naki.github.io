@@ -1,6 +1,6 @@
 ---
 title: 'NULL: AUTHOR'
-subtitle: Sometimes the 26th slot contains Jonathan. Sometimes it does not.
+subtitle: Sometimes the 25th slot contains Jonathan. Sometimes it does not.
 arg_id: P11-001-NULL-AUTHOR
 phase: 11
 order: 1
@@ -22,7 +22,7 @@ prev_slug: null-index
 next_slug: null-reader
 ---
 
-One build assigns slot 26:
+One build assigns slot 25:
 
 `JONATHAN YARYAN / AUTHOR`
 

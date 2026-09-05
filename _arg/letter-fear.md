@@ -18,7 +18,7 @@ tags:
 - tahaufya
 - phase-7
 - letter
-prev_slug: letter-isaac
+prev_slug: letter-amy
 next_slug: letter-zucchi
 ---
 

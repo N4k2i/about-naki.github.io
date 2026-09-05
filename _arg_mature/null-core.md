@@ -1,6 +1,6 @@
 ---
 title: NULL CORE
-subtitle: The 26th slot is the outside position, not a hidden character.
+subtitle: The 25th slot is the outside position, not a hidden character.
 arg_id: P11-005-NULL-CORE
 phase: 11
 order: 5
@@ -37,7 +37,7 @@ In the household, it is independent witness.
 
 In the ARG, it is the player.
 
-The twenty-sixth slot was never a secret character.
+The twenty-fifth slot was never a secret character.
 
 It was the empty chair reserved for whoever was currently capable of saying:
 

@@ -66,7 +66,7 @@ Jonathan did not understand.
 
 Then the living-room light flickered.
 
-Twenty-four new files appeared in the browser cache.
+Twenty-three new files appeared in the browser cache.
 
 Naki set the glass down.
 

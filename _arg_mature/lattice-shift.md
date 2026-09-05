@@ -17,7 +17,7 @@ tags:
 - phase-15
 - puzzle-network
 - hard
-puzzle_answer: KJGA
+puzzle_answer: KGAC
 puzzle_unlock: pz-20
 difficulty: hard
 puzzle_type: per-letter Caesar
@@ -34,7 +34,7 @@ requires_age_gate: true
 
 <div class="arg-mature-banner"><strong>18+ ARCHIVE</strong> — This is the mature version of the record. <a href="{{ '/signal/lattice-shift/' | relative_url }}">View standard version</a>.</div>
 
-Take initials of James, Isaac, Fear, Zucchi: J I F Z. Shift each forward by 1.
+Take initials of James, Fear, Zucchi, Blurb: J F Z B. Shift each forward by 1.
 
 ---
 

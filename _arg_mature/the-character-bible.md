@@ -28,7 +28,7 @@ requires_age_gate: true
 
 <div class="arg-mature-banner"><strong>18+ ARCHIVE</strong> — This is the mature version of the record. <a href="{{ '/signal/the-character-bible/' | relative_url }}">View standard version</a>.</div>
 
-The file was **212 pages**.
+The file was enormous.
 
 Jonathan had built it to keep the cast consistent: Locked Canon, Bible Expansion, Open Field.
 A system designed to prevent contradictions.

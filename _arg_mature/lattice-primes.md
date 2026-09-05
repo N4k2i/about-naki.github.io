@@ -17,7 +17,7 @@ tags:
 - phase-15
 - puzzle-network
 - hard
-puzzle_answer: MJSMZJDPG
+puzzle_answer: MJSMBBSRV
 puzzle_unlock: pz-19
 difficulty: hard
 puzzle_type: dossier cipher
@@ -34,7 +34,7 @@ requires_age_gate: true
 
 <div class="arg-mature-banner"><strong>18+ ARCHIVE</strong> — This is the mature version of the record. <a href="{{ '/signal/lattice-primes/' | relative_url }}">View standard version</a>.</div>
 
-Prime dossier numbers 1–25 are 2,3,5,7,11,13,17,19,23. Take the first letter of each corresponding current-cast character name.
+Prime dossier numbers 1–24 are 2,3,5,7,11,13,17,19,23. Take the first letter of each corresponding current-cast character name.
 
 The roster is on the Character Bible page.
 

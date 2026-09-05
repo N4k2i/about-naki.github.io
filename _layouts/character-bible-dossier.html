@@ -2,6 +2,14 @@
 layout: default
 ---
 
+{% assign dossier_records = site.tahaufya_bible | sort: "dossier_number" %}
+{% assign display_dossier_number = page.dossier_number %}
+{% for dossier in dossier_records %}
+  {% if dossier.url == page.url %}
+    {% assign display_dossier_number = forloop.index %}
+  {% endif %}
+{% endfor %}
+
 <section class="page-hero section bible-dossier-hero">
   <div class="shell">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -10,7 +18,7 @@ layout: default
       <span aria-current="page">{{ page.title }}</span>
     </nav>
 
-    <p class="eyebrow">TAHAUFYA // DOSSIER {{ page.dossier_number }}</p>
+    <p class="eyebrow">TAHAUFYA // DOSSIER {{ display_dossier_number }}</p>
     <h1>{{ page.title }}</h1>
     <p class="page-hero-description">{{ page.category }}</p>
   </div>
@@ -40,9 +48,27 @@ layout: default
       <aside class="glass-card wiki-tools">
         <div class="card-label">BIBLE TOOLS</div>
         <a href="{{ '/character-bible/' | relative_url }}">Character Bible Home</a>
-        <a href="{{ page.source_pdf | relative_url }}" target="_blank" rel="noopener">Open Original PDF</a>
         <button type="button" data-copy-record-link>COPY DOSSIER LINK</button>
       </aside>
     </div>
   </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.bible-transcript').forEach(pre => {
+    let text = pre.textContent || '';
+    const replacements = [
+      ['James, Fear, Zucchi, Joel, and Isaac belong to his close social circle.', 'James, Fear, Zucchi, Blurb, and Joel belong to his close social circle.'],
+      ['James, Fear, Zucchi, Blurb, Joel, and Isaac', 'James, Fear, Zucchi, Blurb, and Joel'],
+      ['James, Fear, Zucchi, Joel, and Isaac', 'James, Fear, Zucchi, Blurb, and Joel'],
+      ['James/Fear/Zucchi/Joel/Isaac', 'James/Fear/Zucchi/Blurb/Joel'],
+      ['Fear/Zucchi/Blurb/Joel/Isaac', 'Fear/Zucchi/Blurb/Joel'],
+      ['James/Zucchi/Blurb/Joel/Isaac', 'James/Zucchi/Blurb/Joel']
+    ];
+    replacements.forEach(([from, to]) => { text = text.split(from).join(to); });
+    text = text.split('\n').filter(line => !/\bIsaac\b/i.test(line)).join('\n');
+    pre.textContent = text;
+  });
+});
+</script>

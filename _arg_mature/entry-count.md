@@ -17,7 +17,7 @@ tags:
 - phase-13
 - puzzle-network
 - beginner
-puzzle_answer: TWENTYFIVE
+puzzle_answer: TWENTYFOUR
 puzzle_unlock: pz-07
 difficulty: beginner
 puzzle_type: metadata
@@ -34,7 +34,7 @@ requires_age_gate: true
 
 <div class="arg-mature-banner"><strong>18+ ARCHIVE</strong> — This is the mature version of the record. <a href="{{ '/signal/entry-count/' | relative_url }}">View standard version</a>.</div>
 
-The current-cast bible contains 25 active dossiers. Spell that number as one word.
+The current-cast bible contains 24 active dossiers. Spell that number as one word.
 
 ---
 

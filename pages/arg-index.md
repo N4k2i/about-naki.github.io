@@ -21,7 +21,7 @@ sitemap: false
 
 <section class="arg-index-intro">
   <p>
-    At 02:13 local archive time, twenty-five records in the
+    At 02:13 local archive time, twenty-four records in the
     <em>TAHAUFYA: Found in the Noise</em> character bible stopped resolving as text
     and began resolving as witnesses.
   </p>
@@ -81,11 +81,47 @@ sitemap: false
 
 <!-- T H E E D G E I S N O T A W A L L -->
 
-
----
-
 <section class="arg-code-panel">
   <p class="arg-terminal-label">LOCAL CONFIGURATION</p>
   <p>The archive has an optional parallel 18+ route.</p>
   <a class="button button-ghost" href="{{ '/signal/settings/' | relative_url }}">ARG SETTINGS</a>
 </section>
+
+<script>
+(() => {
+  const norm = value => String(value || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  const unlockRoster = (input, feedback) => {
+    if (norm(input?.value) !== 'TWENTYFOUR') return false;
+    const key = 'outside-noise:unlocks';
+    let unlocks = [];
+    try { unlocks = JSON.parse(localStorage.getItem(key) || '[]'); } catch (_) {}
+    if (!Array.isArray(unlocks)) unlocks = [];
+    if (!unlocks.includes('roster')) unlocks.push('roster');
+    localStorage.setItem(key, JSON.stringify(unlocks));
+    if (feedback) feedback.textContent = 'RECOVERY ACCEPTED: ROSTER.';
+    if (input) input.value = '';
+    setTimeout(() => location.reload(), 120);
+    return true;
+  };
+  document.addEventListener('click', event => {
+    const button = event.target.closest('.arg-index-code [data-arg-code-submit]');
+    if (!button) return;
+    const panel = button.closest('.arg-index-code');
+    const input = panel?.querySelector('[data-arg-code-input]');
+    const feedback = panel?.querySelector('[data-arg-code-feedback]');
+    if (unlockRoster(input, feedback)) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  }, true);
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Enter' || !event.target.matches('.arg-index-code [data-arg-code-input]')) return;
+    const panel = event.target.closest('.arg-index-code');
+    const feedback = panel?.querySelector('[data-arg-code-feedback]');
+    if (unlockRoster(event.target, feedback)) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  }, true);
+})();
+</script>

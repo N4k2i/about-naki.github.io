@@ -1,6 +1,6 @@
 ---
 title: 'NULL: AUTHOR'
-subtitle: Sometimes the 26th slot contains Jonathan. Sometimes it does not.
+subtitle: Sometimes the 25th slot contains Jonathan. Sometimes it does not.
 arg_id: P11-001-NULL-AUTHOR
 phase: 11
 order: 1
@@ -28,7 +28,7 @@ requires_age_gate: true
 
 <div class="arg-mature-banner"><strong>18+ ARCHIVE</strong> — This is the mature version of the record. <a href="{{ '/signal/null-author/' | relative_url }}">View standard version</a>.</div>
 
-One build assigns slot 26:
+One build assigns slot 25:
 
 `JONATHAN YARYAN / AUTHOR`
 

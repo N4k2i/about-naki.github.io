@@ -17,14 +17,14 @@ real_world_cast:
   role: house cat / sibling of Scout
 - name: Scout
   role: house cat / sibling of Shadow
-tahaufya_count: 25
+tahaufya_count: 24
 phases:
 - number: 0
   name: Checksum Failure
   theme: The website notices something that should not exist.
 - number: 1
   name: Arrivals
-  theme: Twenty-five fictional people cross the edge.
+  theme: Twenty-four fictional people cross the edge.
 - number: 2
   name: The House
   theme: Jonathan's family becomes part of the impossible.
@@ -61,7 +61,7 @@ phases:
 secret_codes:
 - code: THEEDGEISNOTAWALL
   unlocks: breach
-- code: TWENTYFIVE
+- code: TWENTYFOUR
   unlocks: roster
 - code: SHADOWREMEMBERS
   unlocks: witness

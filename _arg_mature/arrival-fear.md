@@ -10,7 +10,7 @@ record_type: 18+ ARRIVAL RECORD
 signal_strength: 89%
 requires: []
 timestamp: DAY 0 // 04:20:08
-prev_slug: arrival-isaac
+prev_slug: arrival-amy
 next_slug: arrival-zucchi
 sitemap: false
 tags:
@@ -58,7 +58,7 @@ Then the line labeled **NEEDS**:
 There was no correct reaction. Some laughed. Some went quiet. Some argued with the wording.
 The most unsettling response was recognition.
 
-By dawn, the house contained twenty-five people who remembered being fictional and six real-world
+By dawn, the house contained twenty-four people who remembered being fictional and six real-world
 witnesses who could no longer agree on what the word *fictional* was supposed to mean.
 
 Shadow and Scout continued making their own determinations.
